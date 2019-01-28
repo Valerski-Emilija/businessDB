@@ -21,7 +21,7 @@ What is still work in progress:
 
 
 
-Technologies: PHP7 for the backend (plain PHP, no framework) and Angular(5+) for the frontend, with a minimal non-invasive routing animation to make it look smoother when navigate through components.
+Technologies: PHP7 for the backend (plain PHP, no framework) and Angular(5+) for the frontend, no fancy designs, just bootstrap css and a minimal routing animation to make it look smoother when navigating through components.
 
 No security measure is implemented right now, no authentication, passwords, logins.
 
