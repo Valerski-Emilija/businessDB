@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <h2 style="margin-top:50px">{{title}}</h2>
+  <div class="row">
+  <div class="col-lg-4">
+    <form [formGroup]="serviceForm" (ngSubmit)="submitForm(serviceForm)">
+      <div class="form-group">
+
+        <label for="Type">Type</label>
+        <input type="text" class="form-control" id="type"
+        formControlName="TYPE"
+        [ngModel] = "service?.TYPE">
+      </div>
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="description"
+        formControlName="DESCRIPTION"
+        [ngModel] = "service?.DESCRIPTION">
+      </div>
+      <div class="form-group">
+        <label for="Price">Price</label>
+        <input type="text" class="form-control" id="price"
+        formControlName="PRICE"
+        [ngModel] = "service?.PRICE">
+      </div>
+
+      <button type="button" class="btn btn-danger" (click)="onClear()">Clear</button>
+      <button class="btn btn-primary" name="addService">Save</button>
+    </form>
+  </div>
+</div>
+</div>
+<!-- <div class="row" *ngIf= "added" style="margin-top:50px">
+  <div class="alert alert-success col-lg-4">Service successfully added!</div>
+</div> -->
+<app-footer></app-footer>

@@ -1,0 +1,5 @@
+:host{
+  display: block;
+   /* this property is needed to make the animations work. By default Angular components are
+   inline elements, animations work with blocks. Don't ask me why is not my invention */
+}

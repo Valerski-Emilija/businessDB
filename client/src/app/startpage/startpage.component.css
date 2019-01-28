@@ -1,0 +1,12 @@
+.bg{
+  position: absolute;
+}
+.icons{
+  margin-left: 30%;
+  margin-top: 20%;
+}
+.startpage-icon span{
+  position: relative;
+  left: 20%;
+  top: 60%
+}
