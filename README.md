@@ -1,7 +1,6 @@
 # businessDB
 Full-stack, PHP7 + Angular(5+)
 
-Full-stack, PHP7 + Angular(5+)
 
 A simple application for (fictive) small business to keep track of your customers and the service you offer.
 
