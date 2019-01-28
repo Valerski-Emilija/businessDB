@@ -23,7 +23,7 @@ What is still work in progress:
 
 Technologies: PHP7 for the backend (plain PHP, no framework) and Angular(5+) for the frontend, with a minimal non-invasive routing animation to make it look smoother when navigate through components.
 
-No security measure is implemented right now, no authentication, no passwords and logins.
+No security measure is implemented right now, no authentication, passwords, logins.
 
 
 ------Copyright/credits------ 
