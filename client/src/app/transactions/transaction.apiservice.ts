@@ -3,30 +3,30 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable, Subject } from 'rxjs';
-import { Service } from '../app.models';
+import { Transaction } from '../app.models';
 
 
 @Injectable()
-export class ServiceApiservice {
+export class TransactionApiservice {
 
 apiUrl = 'http://localhost/businessDB/server';
-service: Service;
-services: Service[] = [];
+transaction: Transaction;
+transactions: Transaction[] = [];
 id: number;
 result:any;
 
 
 constructor(private http: Http) { }
 
-getServices()  {
-return this.http.get(this.apiUrl + "/services.php?action=getAll")
+getTransactions()  {
+return this.http.get(this.apiUrl + "/transactions.php?action=getAll")
     .map(result => this.result = result.json());
   }
 
-addService(service: Service)  {
-  const body = JSON.stringify(service);
+addTransaction(transaction: Transaction)  {
+  const body = JSON.stringify(transaction);
   const headers = new Headers({'Content-Type': 'application/json'});
-  return this.http.post(this.apiUrl + "/services.php?action=create", body, {headers: headers});
+  return this.http.post(this.apiUrl + "/transaction.php?action=create", body, {headers: headers});
    // .map((response: Response) => {
    //   const result = response.json();
    //   const service = new Service(result.ID,result.TYPE, result.DESCRIPTION, result.PRICE);
@@ -42,20 +42,20 @@ getService(id: number){
   })
 }
 
-editService(service: Service)  {
+editTransaction(transaction: Transaction)  {
 
-  const body = JSON.stringify(service);
+  const body = JSON.stringify(transaction);
   const headers = new Headers({'Content-Type': 'application/json'});
   // this.servicesListChanged.next(this.services.slice());
-  return this.http.put(this.apiUrl + "/services.php?action=edit&id=" + service.ID, body, {headers: headers})
+  return this.http.put(this.apiUrl + "/transactions.php?action=edit&id=" + transaction.ID, body, {headers: headers})
 ;
 // this.servicesListChanged.next(this.services.slice());  //unreachable code
 }
 
 
 //------------code works if calling function from the service component-------------
-deleteService(service) {
-  return this.http.delete(this.apiUrl + "/services.php?action=delete&id=" + service.ID );
+deleteTransaction(transaction) {
+  return this.http.delete(this.apiUrl + "/transactions.php?action=delete&id=" + transaction.ID );
         // .map((res: Response) => res.json());
 
 
@@ -63,10 +63,10 @@ deleteService(service) {
 
 //----------Code works if calling function from the servicesList component-------------
 
-DeleteService(service) {
+DeleteTransaction(transaction) {
 const headers = new Headers({ 'Content-Type': 'application/json' });
 let options = new RequestOptions({ headers: headers });
-return this.http.delete(this.apiUrl + "/services.php?action=delete&id=" + service);
+return this.http.delete(this.apiUrl + "/transactions.php?action=delete&id=" + transaction);
  // .map((res: Response) => res.json());
  //      }
 

@@ -9,7 +9,7 @@ import { Customer } from '../app.models';
 @Injectable()
 export class CustomersService {
 
-apiUrl = 'http://localhost/myservices2/server';
+apiUrl = 'http://localhost/businessDB/server';
 customer : Customer;
 customers : Customer[] = [];
 id: number;

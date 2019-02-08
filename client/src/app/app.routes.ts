@@ -1,17 +1,16 @@
 import { Routes, RouterModule } from "@angular/router";
 
 import { CustomersFormComponent } from './form/customersForm.component';
-// import { DataComponent } from './data/data.component';
-// import { CustomerComponent } from './customer/customer.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 import { CustomersComponent } from './customers/customers.component';
 import { StartpageComponent } from './startpage/startpage.component';
 import { ServiceFormComponent } from './form/serviceForm.component';
 import { ServicesListComponent } from './service/servicesList.component';
+import { TransactionsFormComponent } from './form/transactionsForm.component';
 
 
 const APP_ROUTES: Routes=[
   { path: '', component: StartpageComponent},
-  // { path: 'customers', component: DataComponent},
   { path: 'customers', component: CustomersComponent},
   { path: 'customersForm', component: CustomersFormComponent },
   { path: 'customers/edit/:id', component: CustomersFormComponent },
@@ -20,7 +19,9 @@ const APP_ROUTES: Routes=[
   { path: 'edit/:id', component: CustomersFormComponent },
   { path: 'serviceForm', component: ServiceFormComponent},
   { path: 'services', component: ServicesListComponent },
-  { path: 'services/edit/:id', component: ServiceFormComponent }
+  { path: 'services/edit/:id', component: ServiceFormComponent },
+  { path: 'transactions', component: TransactionsComponent },
+  { path: 'transactionForm', component: TransactionsFormComponent }
 
 
 ]

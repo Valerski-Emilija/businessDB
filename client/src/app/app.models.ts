@@ -17,3 +17,14 @@ export class  Service {
   )  {}
 
 }
+
+export class  Transaction {
+    constructor(
+        public ID?: number,
+        public CUSTOMER_ID?: number,
+        public SERVICE_ID?: number,
+        public amount?: number,
+        public price_total?: string
+  )  {}
+
+}

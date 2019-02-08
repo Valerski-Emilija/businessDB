@@ -1,0 +1,42 @@
+<div class="wrapper">
+<h2 style="margin-top:50px">{{ title }}</h2>
+<div class="row">
+  <div class="col-lg-4">
+    <form (ngSubmit)="sendForm(f)" #f="ngForm" class="form-inline">
+
+
+
+        <label for="Service">Service</label>
+        <select class="form-control" id="service"
+        [ngModel]="service?.TYPE"
+        name="TYPE">
+        <option *ngFor="let service of services">
+        {{ service.TYPE }}
+      </option>
+      </select>
+       <label for="Customer">Customer</label>
+        <select class="form-control" id="customer"
+        [ngModel]="customer?.NAME"
+        name="NAME">
+        <option *ngFor="let customer of customers">
+          {{ customer.NAME }}
+        </option>
+      </select>
+      <label for="amount">amount</label>
+       <select class="form-control" id="amount"
+       [ngModel]="transaction?.amount"
+       name="NAME">
+       <option value="">placeholder</option>
+       <!-- <option *ngFor="let number of numbers">
+         {{ number }}
+       </option> -->
+     </select>
+
+
+      <button type="button" class="btn btn-danger" (click)="onClear(f)">Clear</button>
+      <button class="btn btn-primary" name="addCustomer">Save</button>
+    </form>
+  </div>
+</div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,40 @@
+<div class="wrapper">
+  <a routerLink="/transactionForm" class="btn btn-info" style="margin-top:50px">
+  Add Transaction
+</a>
+<a routerLink="/customers">
+<span class="btn btn-info" style="margin-top:50px; margin-left:50px">
+ Go to customers
+</span>
+</a>
+<a routerLink="/servicesnd">
+<span class="btn btn-info" style="margin-top:50px; margin-left:50px">
+ Go to services
+</span>
+</a>
+<table class="table table-striped table-bordered" style="margin-top: 50px">
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Service</th>
+      <th>Amount</th>
+      <th>Price total</th>
+      <th>Paid</th>
+      <th>Manage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let transaction of transactions" >
+     <td>{{ transaction.NAME }} </td>
+     <td>{{ transaction.TYPE }}</td>
+     <td>{{ transaction.amount }}</td>
+     <td>{{ transaction.price_total }}</td>
+     <td>{{ transaction.paid }}</td>
+     <td><a routerLink="edit/{{transaction.ID}}" style="cursor: pointer" class="btn btn-warning">Edit</a>
+     <a class="btn btn-danger ml-2"(click)="Delete(transaction.ID); close()">Delete</a>
+     </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<app-footer></app-footer>

@@ -19,6 +19,8 @@ create database db_name_here;
             ID INT AUTO_INCREMENT PRIMARY KEY,
               CUSTOMER_ID INT NOT NULL,
               SERVICE_ID INT NOT NULL,
+              amount INT,
+              price_total FLOAT,
               FOREIGN KEY (CUSTOMER_ID) REFERENCES customers (ID),
               FOREIGN KEY (SERVICE_ID) REFERENCES services (ID)
               )ENGINE= InnoDB;
